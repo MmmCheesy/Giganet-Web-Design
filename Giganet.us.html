@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#logo {
+	-webkit-animation-name: LogoAnimation; /* Safari 4.0 - 8.0 */
+	-webkit-animation-delay: 2s;
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+	-webkit-background-attachment: fixed;
+    animation-name: LogoAnimation;
+	animation-delay: 2s;
+    animation-duration: 4s;
+	animation-fill-mode: forwards;
+	background-attachment: fixed;
+}
+.fix{
+	width: 100%;
+	height: 61px;
+    position: fixed;
+    margin-bottom: 40px;
+    top: 0;
+    z-index: 2;
+    background-color: #F8F8F1;
+	background-repeat: repeat-x;
+	position: fixed;
+}
+.hamburgerfix{
+	width: 60px;
+	height: 60px;
+    position: fixed;
+    margin-bottom: 40px;
+    top: 0;
+    z-index: 3;
+    background-color: #F8F8F1;
+	background-repeat: repeat-x;
+	position: fixed;
+}
+#menufix{
+	width: 250px;
+	height: 1000px;
+    position: fixed;
+    margin-bottom: 40px;
+    top: 0;
+    z-index: 1;
+    background-color: #F8F8F1;
+	background-repeat: repeat-x;
+	position: fixed;
+}
+#content{
+	-webkit-animation-name: ContentSet; /* Safari 4.0 - 8.0 */
+	-webkit-animation-delay: 3s;
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    animation-name: ContentSet;
+	animation-delay: 3s;
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+#HR {
+	-webkit-animation-name: LogoLineSet; /* Safari 4.0 - 8.0 */
+	-webkit-animation-delay: 5s;
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+	animation-name: LogoLineSet;
+	animation-delay: 3s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+#hambur {
+	-webkit-animation-name: AmboogaSet; /* Safari 4.0 - 8.0 */
+	-webkit-animation-delay: 2.5s;
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+	animation-name: AmboogaSet;
+	animation-delay: 2.5s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	background-attachment: fixed;
+}
+#hint {
+	-webkit-animation-name: hideHint;
+	-webkit-animation-delay: 4.5s;
+	-webkit-animation-duration: 7s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: hideHint;
+	animation-delay: 4.5s;
+	animation-duration: 7s;
+	animation-fill-mode: forwards;
+}
+@keyframes LogoAnimation {
+	from {position: relative; bottom: -100px; height: 400px; width: 800px;}
+	to {position: relative; bottom: 70px; height: 150px; width: 300px;}
+}
+@-webkit-keyframes LogoAnimation {
+	from {position: relative; bottom: -100px; height: 400px; width: 800px;}
+	to {position: relative; bottom: 70px; height: 150px; width: 300px;}
+}
+@keyframes ContentSet {
+	from {position: relative; bottom: -1000px;}
+	to {position: relative; bottom: -300px;}
+}
+@-webkit-keyframes ContentSet {
+	from {position: relative; bottom: -1000px;}
+	to {position: relative; bottom: -300px;}
+}
+@keyframes LogoLineSet {
+	from {position: relative; left: -1500px;}
+	to {position: relative; left: 0px;}
+}
+@-webkit-keyframes LogoLineSet {
+	from {position: relative; left: -1500px;}
+	to {position: relative; left: 0px;}
+}
+@keyframes AmboogaSet {
+	from {position: relative; top: 1200px; height: 400px;}
+	to {position: relative; top: 0px; height: 60px;}
+}
+@-webkit-keyframes AmboogaSet {
+	from {position: relative; top: 1200px; height: 400px;}
+	to {position: relative; top: 0px; height: 60px;}
+}
+@keyframes hideHint {
+    0% {position: relative; left: -100px; color: hsla(0,0%,0%,1.00);}
+	33% {position: relative; left: 0px; color: hsla(0,0%,0%,1.00);}
+	66% {position: relative; left: 0px; color: hsla(0,0%,0%,1.00);}
+	100% {position: relative; left: 0px; color: hsla(0,0%,0%,0.00);}
+}
+@-webkit-keyframes hideHint {
+    0% {position: relative; left: -100px; color: hsla(0,0%,0%,1.00);}
+	33% {position: relative; left: 0px; color: hsla(0,0%,0%,1.00);}
+	66% {position: relative; left: 0px; color: hsla(0,0%,0%,1.00);}
+	100% {position: relative; left: 0px; color: hsla(0,0%,0%,0.00);}
+}
+</style>
+</head>
+<body>
+	
+<script>
+	var MenuOpen = false;
+	
+	function menuFunction(){
+		if (MenuOpen == false){
+			MenuOpen = true;
+			document.getElementById("menufix").style.left = 10 + 'px';
+		}
+		else if (MenuOpen == true) {
+			MenuOpen = false;
+			document.getElementById("menufix").style.left = -500 + 'px';
+		}
+	}
+</script>
+
+<div class="fix"><hr id="HR" style="position: relative; top: 53px; left: -1500px;"><p style="text-align: center;"><br><img id="logo" src="Giganet Logos/Giganic name.png" width="800" height="400" style="position: relative; bottom: -100px; " alt="Giganet Logo"></p>
+</div>
+<div style="background-color: #F8F8F1; height: 1000px; position: relative; top: -100px;">
+<p id="content" style="text-align: center; bottom: -1000px; position: relative"><strong>Security, Luxury, Exclusivity; <br> Provided by GIGANET</strong><br><br><br>Welcome to Giganet. Internet isn't a mystery here. <br> We'll tell you how it works, but mostly we want you to sit back and enjoy.<br>At speeds never seen outside a test bench, and with security to rival a bank vault,<br>its luxury that fits your fast paced and online lifestyle.<br><br><br></p>
+<!--Giganet also offers free and secure storage space<br>for your files, included in your internet package.-->
+<div class="hamburgerfix"><img class="Ambooga" id="hambur" src="Giganet Logos/Ambooga 3.44.16 PM.png" alt="Ambooga" width="60" height="60" style="position: relative; top: 1200px; left: 0px;" onClick="menuFunction()"><a href="#Setup"><div style="color: hsla(0,0%,0%,0.00); height: 100px; width: 100px; position: absolute; z-index: 2;"></div></a><p id="hint" style="font-size: 14px; position: relative; left: -100px; top: 0px; z-index: 1;">Click here for router setup.</p>
+</div>
+</div>
+<div class="Menu" id="menufix" style="background-color: #D5D5D5; left: -500px; top: 0px;"><br><br><br><p><b>Sign In</b><br><br>UserName:<br><input type="text"><br><br>Password:<br><input type="text"><br><br>Or Create An Account</p><hr>Tab 1<br>Tab 2<br>Tab 3<br>Tab 4<br>
+</div>
+<p id="Setup" style="position: relative; top: -10,000px;">Set it up now! and set it up good!</p>
+</body>
+</html>
